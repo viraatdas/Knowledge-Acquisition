@@ -2,6 +2,15 @@
 
 https://docs.nvidia.com/cuda/cuda-c-programming-guide/
 
+# Definition
+
+- host: the CPU
+- device: the GPU
+- host memory: the system main memory
+- device memory: onboard memory on a GPU card
+- kernels: a GPU function launched by the host and executed on the device
+- device function: a GPU function executed on the device which can only be called from the device (i.e. from a kernel or another device function)
+
 ## 1. Introduction
 
 - **GPU Application**
@@ -112,17 +121,18 @@ and coordination within the block, as all threads can be addressed and communica
 using a simple index.
 
 ### `threadIdx`
+
 3-component vector that represent the thread index within a block. Makes it natural to represent a vector, matrix, and volume (?).
 
 In the CUDA programming model, `threadIdx` is a 3-component vector that represents the thread index within a block. The
 three components are:
 
-* `threadIdx.x`: The index of the thread in the one-dimensional dimension of the block. For a one-dimensional block,
-this is the same as the thread ID.
-* `threadIdx.y`: The index of the thread in the two-dimensional dimension of the block (if the block size is greater
-than 1).
-* `threadIdx.z`: The index of the thread in the three-dimensional dimension of the block (if the block size is greater
-than 2).
+- `threadIdx.x`: The index of the thread in the one-dimensional dimension of the block. For a one-dimensional block,
+  this is the same as the thread ID.
+- `threadIdx.y`: The index of the thread in the two-dimensional dimension of the block (if the block size is greater
+  than 1).
+- `threadIdx.z`: The index of the thread in the three-dimensional dimension of the block (if the block size is greater
+  than 2).
 
 The relationship between `threadIdx` and the thread ID is straightforward: For a one-dimensional block, `threadIdx` and
 `threadID` are the same; for a two-dimensional block of size `(Dx, Dy)`, `threadIdx.y` represents the thread ID of a
@@ -138,7 +148,6 @@ memory resources of the same streaming multiprocessor core. On current GPUs, a t
 threads. However, multiple equally-shaped thread blocks can be executed simultaneously, allowing the total number of
 threads to be equal to the number of threads per block in each dimension.
 
-
 Cooperative groups are used to enable efficient cooperation among threads within a block. Shared memory is expected to
 be a low-latency memory near each processor core (much like an L1 cache), and `__syncthreads()` is expected to be
 lightweight. Cooperative groups provide a rich set of thread-synchronization primitives that can be used to coordinate
@@ -146,3 +155,24 @@ memory accesses among threads within a block.
 
 **Streaming multiprocessor core**
 
+### Thread block clusters
+
+## Programming Interface
+
+### Compilation with nvcc
+
+- Kernels can be written using the CUDA instruction set architecture called `PTX`.
+- More effective to use high-level programming language such as C++
+- Both cases, kernels must be compiled into binary code by `nvcc` to execute on device
+
+### nvcc
+
+- compiler drive to simplify process of compiling C++ or PTX code
+
+Link `nvcc` user manual (?)
+
+**Compilation workflow**
+
+1. **Offline compilation**
+
+2. **Just-in-Time Compilation**
