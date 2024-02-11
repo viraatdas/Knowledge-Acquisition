@@ -187,3 +187,110 @@ Applications can then:
 - Or ignore the modified host code (if any) and use the [CUDA driver API](#driver-api) to load and execute the PTX code or cubin object
 
 2. **Just-in-Time Compilation**
+
+Just-in-time (JIT) compilation is a technique where code is compiled and
+executed on the fly, at the time it's needed, rather than being compiled
+and loaded into memory all at once. In the context of CUDA, JIT
+compilation is used to compile C++ device code into PTX binary code that
+can be executed directly on the GPU.
+
+Here's how it works:
+
+1. When an application is launched, the device driver compiles any PTX
+   code loaded by the application at runtime using a just-in-time compiler.
+   This increases the load time of the application, but allows it to benefit
+   from any new compiler improvements that come with each new device driver
+   release.
+2. The compiled binary code is cached by the device driver for subsequent
+   invocations of the application to avoid repeating the compilation process.
+   The cache is automatically invalidated when the device driver is upgraded,
+   so applications can benefit from the improvements in the new just-in-time
+   compiler built into the device driver.
+3. Environment variables can be used to control JIT compilation, as
+   described in CUDA Environment Variables.
+4. As an alternative to using nvcc to compile CUDA C++ device code, NVRTC
+   (NVIDIA Runtime Compilation) can be used to compile CUDA C++ device code
+   to PTX at runtime. NVRTC is a runtime compilation library for CUDA C++;
+   more information can be found in the NVRTC User guide.
+
+Examples of JIT compilation in action:
+
+1. Imagine an application that needs to perform a computationally
+   intensive task, such as matrix multiplication. Instead of loading the
+   entire code for the matrix multiplication function at once, the device
+   driver can compile just-in-time the necessary parts of the function when
+   the application invokes it. This reduces the load time and memory usage,
+   while still allowing the application to benefit from any optimizations
+   that come with each new device driver release.
+2. Another example is a web browser that needs to render 3D graphics for a
+   web page. Instead of loading the entire 3D rendering engine at once, the
+   device driver can compile just-in-time the necessary parts of the engine
+   when the browser invokes them. This reduces the load time and memory
+   usage, while still allowing the browser to benefit from any optimizations
+   that come with each new device driver release.
+
+In summary, JIT compilation in CUDA allows applications to benefit from
+improved compilers and other optimizations without requiring a complete
+code recompilation when the device driver changes. It does this by
+compiling only the necessary parts of the application at runtime, caching
+the results for subsequent invocations, and invalidating the cache when
+the device driver is upgraded.
+
+1. What does "new device driver changes" mean?
+
+When we talk about "new device driver changes," we're referring to updates
+or improvements made to the device driver that runs on the GPU. The device
+driver is responsible for managing the communication between the CPU and
+the GPU, and it provides a layer of abstraction between the two. As new
+hardware technologies are developed, the device driver may be updated to
+take advantage of these advancements. These updates could include improved
+support for parallel processing, faster data transfer rates, or new
+features that allow developers to create more complex and powerful
+applications.
+
+When a new device driver is released, it may introduce changes to the way
+code is compiled and executed on the GPU. For example, the new driver
+might provide better support for a particular programming model or
+feature, or it might introduce new APIs or abstractions that simplify
+development. In either case, these changes can affect how code is compiled
+and executed, and JIT compilation helps ensure that applications can take
+advantage of these improvements without requiring a complete code
+recompilation.
+
+2. Does this mean that code won't be compiled unless the JIT thinks it'll
+   be needed?
+
+Not exactly. JIT compilation is designed to optimize code execution based
+on the specific needs of the application and the hardware platform it's
+running on. When an application loads PTX code, the device driver will
+perform just-in-time compilation only if necessary. This means that not
+all PTX code will be compiled at once; instead, the JIT compiler will only
+compile the parts of the code that are actually needed by the application.
+
+For example, imagine an application that performs a matrix multiplication
+operation. If the application only needs to perform this operation a few
+times, then the JIT compiler won't compile the entire matrix
+multiplication function at once. Instead, it will only compile the
+specific parts of the function that are needed for those few invocations.
+This can reduce the load time and memory usage for the application, while
+still allowing it to benefit from any optimizations that come with each
+new device driver release.
+
+In summary, JIT compilation is a dynamic optimization technique that helps
+optimize code execution based on the specific needs of the application and
+the hardware platform it's running on. It doesn't mean that code won't be
+compiled unless the JIT thinks it'll be needed; instead, it means that the
+JIT will only compile the necessary parts of the code at runtime to
+optimize performance.
+
+### Binary Compatibility
+
+_Compute capability_ seems to be a big thing (?)
+
+Binary code is architecture specific. A `cubin` object is generated using the compiler option `-code` that specifies the targeted architecture.
+
+### PTX Compatibility
+
+[Warp Shuffle Functions](#warp-shuffle-functions)
+
+### Application Compatibility
