@@ -175,4 +175,15 @@ Link `nvcc` user manual (?)
 
 1. **Offline compilation**
 
+- nvcc basic workflow consists of separate GPU code from CPU code and then:
+  1. Compiling GPU code into PTX code and/or binary form (`cubin` (?) object)
+  2. modifying host code by replacing the `<<<...>>>` by necessary CUDA runtime function calls to load and launch each compiled kernel from the `PTX` code and/or `cubin` object
+
+The modified host code is output either as C++ code that is left to be compiled using another tool or as object code directly by letting nvcc invoke the host compiler during the last compilation stage (NOTE: can this be made efficient? (?))
+
+Applications can then:
+
+- either link to the compiled host code (this is the most common use case)
+- Or ignore the modified host code (if any) and use the [CUDA driver API](#driver-api) to load and execute the PTX code or cubin object
+
 2. **Just-in-Time Compilation**
