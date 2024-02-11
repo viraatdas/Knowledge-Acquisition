@@ -294,3 +294,13 @@ Binary code is architecture specific. A `cubin` object is generated using the co
 [Warp Shuffle Functions](#warp-shuffle-functions)
 
 ### Application Compatibility
+
+To execute code on devices of specific compute capability, an application must load binary or PTX code that is compatible with this compute capability.
+
+Review this section with access to the `nvcc` user manual (?)
+
+### CUDA runtime
+
+Runtime is implemented in the `cudart` library which is linked to the application either statically via `cudart.lib` or `libcudart.a` or dynamically via `cudart.dll` or `lidcudart.so`.
+
+#### 1. Initialization
