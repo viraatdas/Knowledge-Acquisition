@@ -1,11 +1,11 @@
 # Completed/Ongoing Topics
+
 1. Learning CUDA
-    - main reference: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
+   - main reference: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
 
 # Icebox Topics
-1. PyTorch
-2. Quantum computing 
-3. Signal processing 
-4. Remote sensing for cities
-5. Genetic inspired computing
 
+1. Quantum computing
+1. Signal processing
+1. Remote sensing for cities
+1. Genetic inspired computing
