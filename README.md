@@ -1,6 +1,6 @@
 # Completed/Ongoing Topics
 
-1. Learning CUDA [Ongoing]()
+1. Learning CUDA [Ongoing]
    - main reference: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
 
 # Icebox Topics
