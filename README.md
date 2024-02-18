@@ -3,7 +3,7 @@
 1. Learning CUDA [Ongoing]
    - main reference: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
 2. Learning Verilog [Ongoing]
-    - https://www.youtube.com/watch?v=2IReMT_zjK8
+    - main reference: https://www.youtube.com/watch?v=2IReMT_zjK8
 
 # Icebox Topics
 
