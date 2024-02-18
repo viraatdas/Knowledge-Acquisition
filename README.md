@@ -2,10 +2,10 @@
 
 # Completed/Ongoing Topics
 
-1. Learning CUDA [Ongoing]
+1. [Learning CUDA](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/CUDA/learning_cuda.md) [Ongoing]
    - main reference: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
-2. Learning Verilog [Ongoing]
-    - main reference: https://www.youtube.com/watch?v=2IReMT_zjK8
+2. [Learning Verilog](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/Verilog/learning_verilog.md) [Ongoing]
+   - main reference: https://www.youtube.com/watch?v=2IReMT_zjK8
 
 # Icebox Topics
 
