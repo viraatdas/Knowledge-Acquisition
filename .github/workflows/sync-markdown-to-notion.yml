@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Sync Markdown to Notion
-        uses: tryfabric/markdown-to-notion@v1
+        uses: tryfabric/notion-action@main 
         with:
           file: CUDA/learning_cuda.md # Update this path to your markdown file
           notion_token: ${{ secrets.NOTION_TOKEN }}  # Use the secret you created earlier
