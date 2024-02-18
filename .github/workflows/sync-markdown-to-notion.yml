@@ -17,7 +17,7 @@ jobs:
       - name: Sync Markdown to Notion
         uses: tryfabric/markdown-to-notion@main 
         with:
-          file: CUDA/learning_cuda.md # Update this path to your markdown file
+          file: CUDA/test.md # Update this path to your markdown file
           notion_token: ${{ secrets.NOTION_TOKEN }}  # Use the secret you created earlier
           notion_id: e4d9f690f2314a11b444faff408c6693 # Replace with your actual page ID
           delete_existing: 'true'  # Set to 'false' if you don't want to delete the existing block
