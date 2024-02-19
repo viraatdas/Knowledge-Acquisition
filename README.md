@@ -2,10 +2,12 @@
 
 # Completed/Ongoing Topics
 
-1. [Learning CUDA](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/CUDA/learning_cuda.md) [Ongoing]
+1. [CUDA](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/CUDA/learning_cuda.md) [Ongoing]
    - main reference: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
-2. [Learning Verilog](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/Verilog/learning_verilog.md) [Ongoing]
+2. [Verilog](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/Verilog/learning_verilog.md) [Ongoing]
    - main reference: https://www.youtube.com/watch?v=2IReMT_zjK8
+3. [Linux Kernel Development](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/Linux_Kernel_Development/linux_kernel_development.md)
+   - main reference: https://www.amazon.com/Linux-Kernel-Development-Robert-Love/dp/0672329468
 
 # Icebox Topics
 
