@@ -24,6 +24,7 @@ A lot of my readings might be guided by my current day-to-day focus, so if it se
 1. Genetic inspired computing
 1. 1-bit LLMs
 1. Text-to-video models (https://openai.com/research/video-generation-models-as-world-simulators) 
+1. Entropy
 
 ## Note on the content of the resources
 - Use your judgement and please be fair to the publisher/author. 
