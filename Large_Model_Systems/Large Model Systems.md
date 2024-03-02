@@ -4,4 +4,5 @@ List of following systems in the notes:
 - [[Torchserve]]
 - [[LLaVA]]
 - [[1 bit LLMs]]
+- [[Gemini]]
 
