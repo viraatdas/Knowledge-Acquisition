@@ -15,7 +15,7 @@ For instance, suppose there are eight GPUs on a node and one worker needs 4 GPUs
 
 You can use Pippy integration
 
-### [[#Pippy integration: Pipeline Parallelism for PyTorch]]
+### Pippy integration: Pipeline Parallelism for PyTorch
 
 ![alt text](image.png)
 
@@ -25,7 +25,7 @@ It partitions the layers of a model into stages that can be processed in paralle
 
 ![Pippy from Deep speed](image-1.png)
 
-#### [[#How Pipeline Parallelism Works]]
+#### How Pipeline Parallelism Works
 
 1. Model Segmentation: The entire neural network model is divided into several segments. Each segment can be seen as a subset of consecutive layers of the model.
 
@@ -45,12 +45,12 @@ It partitions the layers of a model into stages that can be processed in paralle
 
 - Bubble Time: There's an inherent inefficiency called "bubble time" or "pipeline bubble," which is the idle time when some devices are waiting for data to process. Optimizing the size of micro-batches and the number of segments can help minimize this effect.
 
-### [[#gRPC Server Side Streaming]]
+### gRPC Server Side Streaming
 
 - gRPC Remote Procedure Call
 - Uses [[HTTP 2.0]], Protocol Buffers as the interface description language, and provides features such as authentication, load balancing, and more
 
-#### [[#Server-side Streaming RPC]]
+#### Server-side Streaming RPC
 
 **What**
 - Client sends a single request to server and receives a stream of responses
