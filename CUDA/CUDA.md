@@ -121,7 +121,7 @@ using a simple index.
 
 ### `threadIdx`
 
-[[3-component vector that represent the thread index within a block]]. Makes it natural to represent a vector, matrix, and volume.
+[[3-component vector that represent the thread index within a block 1]]. Makes it natural to represent a vector, matrix, and volume.
 
 In the CUDA programming model, `threadIdx` is a 3-component vector that represents the thread index within a block. The
 three components are:

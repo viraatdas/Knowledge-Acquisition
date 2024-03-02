@@ -52,7 +52,7 @@ It partitions the layers of a model into stages that can be processed in paralle
 ### [[#gRPC Server Side Streaming]]
 
 - gRPC Remote Procedure Call
-- Uses [[HTTP 2]], Protocol Buffers as the interface description language, and provides features such as authentication, load balancing, and more
+- Uses [[HTTP 2.0]], Protocol Buffers as the interface description language, and provides features such as authentication, load balancing, and more
 
 #### [[#Server-side Streaming RPC]]
 
