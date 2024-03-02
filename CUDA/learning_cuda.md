@@ -122,7 +122,7 @@ using a simple index.
 
 ### `threadIdx`
 
-3-component vector that represent the thread index within a block. Makes it natural to represent a vector, matrix, and volume (?).
+[[3-component vector that represent the thread index within a block]]. Makes it natural to represent a vector, matrix, and volume.
 
 In the CUDA programming model, `threadIdx` is a 3-component vector that represents the thread index within a block. The
 three components are:
@@ -169,17 +169,17 @@ memory accesses among threads within a block.
 
 - compiler drive to simplify process of compiling C++ or PTX code
 
-Link `nvcc` user manual (?)
+Link [[`nvcc` user manual]]
 
 **Compilation workflow**
 
 1. **Offline compilation**
 
 - nvcc basic workflow consists of separate GPU code from CPU code and then:
-  1. Compiling GPU code into PTX code and/or binary form (`cubin` (?) object)
+  1. Compiling GPU code into PTX code and/or binary form ([[`cubin`]] object)
   2. modifying host code by replacing the `<<<...>>>` by necessary CUDA runtime function calls to load and launch each compiled kernel from the `PTX` code and/or `cubin` object
 
-The modified host code is output either as C++ code that is left to be compiled using another tool or as object code directly by letting nvcc invoke the host compiler during the last compilation stage (NOTE: can this be made efficient? (?))
+The modified host code is output either as C++ code that is left to be compiled using another tool or as object code directly by letting nvcc invoke the host compiler during the last compilation stage ([[NOTE: can this be made efficient?]])
 
 Applications can then:
 
@@ -285,7 +285,7 @@ optimize performance.
 
 ### Binary Compatibility
 
-_Compute capability_ seems to be a big thing (?)
+[[_Compute capability_ seems to be a big thing]] 
 
 Binary code is architecture specific. A `cubin` object is generated using the compiler option `-code` that specifies the targeted architecture.
 
@@ -297,7 +297,7 @@ Binary code is architecture specific. A `cubin` object is generated using the co
 
 To execute code on devices of specific compute capability, an application must load binary or PTX code that is compatible with this compute capability.
 
-Review this section with access to the `nvcc` user manual (?)
+Review this section with access to the [[`nvcc` user manual]] 
 
 ### CUDA runtime
 
