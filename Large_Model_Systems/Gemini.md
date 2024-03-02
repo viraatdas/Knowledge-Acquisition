@@ -45,3 +45,22 @@ For gemini, they instead made use of redundant in memory-copies of the model sta
 
 ### Interesting system failure modes
 - [[Silent Data Corruption (SDC)]]
+
+
+
+## Training Dataset
+- trained on both multimodal and multilingual data
+- pretraining uses data from web documents, books, and codde and includes image, audio, and video
+
+**Details**:
+- Used [[SentencePiece tokenizer]]
+- The number of tokens used to train the largest models were determined following the approach in [[Hoffmann et al. (2022)]]. The smaller models are trained for significantly more tokens to improve performance for a given inference budget, similar to the approach advocated in [[Touvron et al. (2023a)]]
+
+
+## Evaluation 
+
+### Image generation
+Gemini is able to output images natively, without having to rely on an intermediate natural language description that can bottleneck the model’s ability to express images. This uniquely enables the model to generate images with prompts using interleaved sequences of image and text in a few-shot setting.
+
+We use multi-objective optimization with a weighted sum of reward scores from helpfulness, factuality, and safety, to train a multi-headed reward model.
+
