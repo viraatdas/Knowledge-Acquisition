@@ -10,6 +10,11 @@ A lot of my readings might be guided by my current day-to-day focus, so if it se
    - main reference: https://www.youtube.com/watch?v=2IReMT_zjK8
 3. [Linux Kernel Development](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/Linux_Kernel_Development/linux_kernel_development.md) [Ongoing]
    - main reference: https://www.amazon.com/Linux-Kernel-Development-Robert-Love/dp/0672329468
+4. [Large Scale ML Systems](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/Large_Model_Systems/Large%20Model%20Systems.md) [Ongoing]
+	- [LLaVa](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/Large_Model_Systems/LLaVA.md)
+	- [Torchserve](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/Large_Model_Systems/Torchserve.md)
+	- [1 bit LLMs]
+	- [Gemini]
 
 # Icebox Topics
 

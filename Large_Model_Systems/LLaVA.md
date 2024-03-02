@@ -1,4 +1,5 @@
 - Multimodal language-image instruction
+resource: [[LLaVA.pdf]]
 
 ## [[#Data Generation]]
 
