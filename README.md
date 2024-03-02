@@ -1,5 +1,7 @@
 [![Synced to https://viraat.lol](https://github.com/viraatdas/Knowledge-Acquisition/actions/workflows/sync-markdown-to-notion.yml/badge.svg)](https://github.com/viraatdas/Knowledge-Acquisition/actions/workflows/sync-markdown-to-notion.yml)
 
+A lot of my readings might be guided by my current day-to-day focus, so if it seems pretty honed on one topic that's why.
+
 # Completed/Ongoing Topics
 
 1. [CUDA](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/CUDA/learning_cuda.md) [Ongoing]
@@ -16,3 +18,5 @@
 1. Remote sensing for cities
 1. Genetic inspired computing
 1. 1-bit LLMs
+1. Text-to-video models (https://openai.com/research/video-generation-models-as-world-simulators) 
+
