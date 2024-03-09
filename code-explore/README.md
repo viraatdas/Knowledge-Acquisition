@@ -46,8 +46,16 @@ Compression took 0.023513041000000002 seconds
 - Encoding
   - output two things: (1) the bimap (2) encoded text
 
+
+Final size: `text-file-full-size.compress_bimap` -> 3 MB (even with `pickle.HIGHEST_PROTOCOL`)
+Final size: `text-file-full-size.bimap` -> 1 KB
 ```python
 ENCODING USING BIMAP
 Compression took 0.025853917000000004 seconds
 
+```
+
+```python
+DECODING USING BIMAP
+Action took 0.17835133399999997 seconds
 ```
