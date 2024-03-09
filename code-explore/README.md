@@ -1,0 +1,44 @@
+# Text encryption
+
+In a flight, want to try creating my own text compressor and uncompressor
+
+- [ ] Gather a large corpus. 
+- [ ] Break it down into samples of various sizes 
+- [ ] Track time of compressing and uncompressing
+- [ ] Track size 
+
+
+## Benchmark
+Original size of `text-file.input`: `1.1 mb` 
+
+**Just using pickle**
+`text-file-full-size.simple_enc_with_pickle`: `1.1 mb`
+
+Compression took 0.023513041000000002 seconds
+
+**Something more sophisitcated**
+
+```python
+def size_analysis(file):
+    total_number_of_bytes = 0
+    num_elements = 0
+    with open(file, "r") as f:
+        text = f.readlines()
+        for el in text:
+            total_number_of_bytes += sys.getsizeof(el)
+            num_elements+=1
+    print(f"Number of lines: {num_elements}")
+    print(f"Total: {total_number_of_bytes} bytes")
+    print(f"On average each line contains: {total_number_of_bytes/num_elements} bytes")
+```
+
+*output*
+```python
+Number of lines: 13169
+Total: 2043690 bytes
+On average each line contains: 155.18946009567924 bytes
+```
+
+
+
+
