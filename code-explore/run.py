@@ -26,7 +26,7 @@ def size_analysis(file):
 # method returns two output:
 # (1) a BiDirectional map with the values of the word
 # (2) the compressed form of the word
-def comress_bimap(file):
+def compress_bimap(file):
     bi_map = BiDirectionalMap()
     output = []
     with open(file, "r") as f:
@@ -35,20 +35,20 @@ def comress_bimap(file):
             for word in line:
                 bi_map.put(word)    
         
-        
         for line in text:
-            line = ""
+            curr_line = ""
             for word in line:
-                line += bi_map.get_value(word) + " "
-            output.append(line)
+                curr_line += str(bi_map.get_value(word)) + " "
+            output.append(curr_line)
     
+    # print(output)
     with open(file+".compress_bimap", "wb") as f:
         pickle.dump(output, f)
-    with open ("file" +".bimap", "wb") as f:
+    with open (file +".bimap", "wb") as f:
         pickle.dump(bi_map, f)
     
 
-def decompres_bimpa(encoded_file, bi_map_file):
+def decompress_bimap(encoded_file, bi_map_file):
 
     bi_map = None
     encoded_text = None
@@ -57,12 +57,13 @@ def decompres_bimpa(encoded_file, bi_map_file):
     
     with open(encoded_file, "rb") as f:
         encoded_text = pickle.load(f).readlines()
+        print(encoded_text)
 
 
 
 ### Utility methods
 def time_method(lambda_expression, num_times=5):
-    time = timeit.timeit(lambda: simple_compress_with_pickle(file), number=num_times) 
+    time = timeit.timeit(lambda_expression, number=num_times) 
     print(f"Compression took {time} seconds")
 
 
@@ -70,10 +71,11 @@ def time_method(lambda_expression, num_times=5):
 file = "text-file-full-size"
 
 # time_method(lambda: simple_compress_with_pickle(file))
-# print("ENCODING USING BIMAP")
-# time_method(lambda: comress_bimap(file))
 
-bi_map_file = ""
-encoded_bimap_file = ""
-print("DECODING USING BIMAP")
-time_method(lambda: decompres_bimpa(encoded_bimap_file, bi_map_file))
+print("ENCODING USING BIMAP")
+time_method(lambda: compress_bimap(file), num_times=1)
+
+# bi_map_file = ""
+# encoded_bimap_file = ""
+# print("DECODING USING BIMAP")
+# time_method(lambda: decompres_bimpa(encoded_bimap_file, bi_map_file))

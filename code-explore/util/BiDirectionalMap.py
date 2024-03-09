@@ -20,3 +20,7 @@ class BiDirectionalMap:
 
     def get_value(self, word: str) -> int:
         return self._wordToVal[word]
+
+    def __repr__(self):
+        return str(self._wordToVal)
+
