@@ -1,5 +1,3 @@
-from collections import defaultdict
-
 class BiDirectionalMap:
     def __init__(self):
         # create a dictionary with default values
@@ -8,7 +6,8 @@ class BiDirectionalMap:
 
     def put(self, word: str) -> None:
         if word in self._wordToVal:
-            raise IllegalArgumentError("Word already exists")
+            # If word exists, don't do anything
+            return None
 
         val = len(self._wordToVal)
         self._wordToVal[word] = val

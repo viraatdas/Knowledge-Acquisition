@@ -1,7 +1,7 @@
 import pickle
 import sys
 import timeit
-from 
+from util import BiDirectionalMap
 
 def simple_compress_with_pickle(file):
     with open(file, "r") as read_file:
@@ -24,11 +24,11 @@ def size_analysis(file):
     print(f"On average each line contains: {total_number_of_bytes/num_elements} bytes")
 
 def compress_build_dictionary_for_words(file):
-    word_dict = dict()
+    bi_map = BiDirectionalMap()
     with open(file, "r") as f:
         for line in f.readlines():
             for word in line:
-                if word not in word_dict
+                bi_map.put(word)
 
 
 
