@@ -1,13 +1,13 @@
 import pickle
 import sys
 import timeit
-from util import BiDirectionalMap
+from util.BiDirectionalMap import BiDirectionalMap
 
 def simple_compress_with_pickle(file):
     with open(file, "r") as read_file:
         text = read_file.readlines()
 
-    with open(file + ".simple_compress_with_pickle", "wb") as pickle_output:
+    with open(file + ".compress_pickle", "wb") as pickle_output:
         pickle.dump(text, pickle_output)        
 
 
@@ -23,12 +23,40 @@ def size_analysis(file):
     print(f"Total: {total_number_of_bytes} bytes")
     print(f"On average each line contains: {total_number_of_bytes/num_elements} bytes")
 
-def compress_build_dictionary_for_words(file):
+# method returns two output:
+# (1) a BiDirectional map with the values of the word
+# (2) the compressed form of the word
+def comress_bimap(file):
     bi_map = BiDirectionalMap()
+    output = []
     with open(file, "r") as f:
-        for line in f.readlines():
+        text = f.readlines()
+        for line in text:
             for word in line:
-                bi_map.put(word)
+                bi_map.put(word)    
+        
+        
+        for line in text:
+            line = ""
+            for word in line:
+                line += bi_map.get_value(word) + " "
+            output.append(line)
+    
+    with open(file+".compress_bimap", "wb") as f:
+        pickle.dump(output, f)
+    with open ("file" +".bimap", "wb") as f:
+        pickle.dump(bi_map, f)
+    
+
+def decompres_bimpa(encoded_file, bi_map_file):
+
+    bi_map = None
+    encoded_text = None
+    with open(bi_map_file, "rb") as f:
+        bi_map = pickle.load(f)
+    
+    with open(encoded_file, "rb") as f:
+        encoded_text = pickle.load(f).readlines()
 
 
 
@@ -37,12 +65,15 @@ def time_method(lambda_expression, num_times=5):
     time = timeit.timeit(lambda: simple_compress_with_pickle(file), number=num_times) 
     print(f"Compression took {time} seconds")
 
-def decode(file):
-    pass
 
 
 file = "text-file-full-size"
 
 # time_method(lambda: simple_compress_with_pickle(file))
-compress_build_dictionary_for_words(file)
+# print("ENCODING USING BIMAP")
+# time_method(lambda: comress_bimap(file))
 
+bi_map_file = ""
+encoded_bimap_file = ""
+print("DECODING USING BIMAP")
+time_method(lambda: decompres_bimpa(encoded_bimap_file, bi_map_file))

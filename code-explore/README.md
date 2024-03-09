@@ -7,16 +7,7 @@ In a flight, want to try creating my own text compressor and uncompressor
 - [ ] Track time of compressing and uncompressing
 - [ ] Track size 
 
-
-## Benchmark
-Original size of `text-file.input`: `1.1 mb` 
-
-**Just using pickle**
-`text-file-full-size.simple_enc_with_pickle`: `1.1 mb`
-
-Compression took 0.023513041000000002 seconds
-
-**Something more sophisitcated**
+## Size analysis
 
 ```python
 def size_analysis(file):
@@ -42,3 +33,21 @@ On average each line contains: 155.18946009567924 bytes
 
 
 
+## Benchmark
+Original size of `text-file.input`: `1.1 mb` 
+
+**Just using pickle**
+`text-file-full-size.simple_enc_with_pickle`: `1.1 mb`
+
+Compression took 0.023513041000000002 seconds
+
+**BiMap**
+- Create a bimap where each word maps to a value and vice versa
+- Encoding
+  - output two things: (1) the bimap (2) encoded text
+
+```python
+ENCODING USING BIMAP
+Compression took 0.025853917000000004 seconds
+
+```
