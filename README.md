@@ -28,8 +28,8 @@ A lot of my readings might be guided by my current day-to-day focus, so if it se
 1. Entropy
 1. Derivatives market
 
-## Note on the content of the resources
+## Note on the files probvided in the resources folder
 - Use your judgement and please be fair to the publisher/author. 
-- Resources where really just added for convenience of consolidation and is not meant for distribution
+- Resources were really just added for convenience of consolidation and is not meant for distribution
 
 
