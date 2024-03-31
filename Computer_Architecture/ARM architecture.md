@@ -38,9 +38,24 @@ Microprocessor is a processor built on a single chip.
 
 ### Beneath the digital abstraction
 
+$V_{OL}$ => output low
+$V_{IL}$ => input low
+$V_{OH}$ => output high
+$V_{IH}$ => input high
+
 **[[Supply voltage]]**
 
 **[[Logic Levels]]**
+
+**[[Noise margins]]**
+![[Pasted image 20240331191553.png]]
+
+
+$V_{DD}$ stands for the voltage on the drain of a metal-oxidesemiconductor transistor, used to build most modern chips. The power supply voltage is also sometimes called $V_{CC}$ , standing for the voltage on the collector of a bipolar junction transistor used to build chips in an older technology. Ground is sometimes called $V_{SS}$ because it is the voltage on the source of a metal-oxidesemiconductor transistor.
+
+**DC Transfer Characteristics**
+
+DC indicates behavior when an input voltage is held constant or changes slowly enough for the rest of the system to keep up. The term’s historical root comes from direct current, a method of transmitting power across a line with a constant voltage. In contrast, the transient response of a circuit is the behavior when an input voltage changes rapidly.
 
 
 
