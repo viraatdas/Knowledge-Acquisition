@@ -43,6 +43,10 @@ $V_{IL}$ => input low
 $V_{OH}$ => output high
 $V_{IH}$ => input high
 
+$V_{DD}$ => highest voltage in the system croms from the power supply and is usually called V_DD
+In 1970’s and 1980’s technology, V DD was generally 5 V. As chips have progressed to smaller transistors, V DD has dropped to 3.3 V, 2.5 V, 1.8 V, 1.5 V, 1.2 V, or even lower to save power and avoid overloading the transistors.
+
+
 **[[Supply voltage]]**
 
 **[[Logic Levels]]**
@@ -58,6 +62,42 @@ $V_{DD}$ stands for the voltage on the drain of a metal-oxidesemiconductor trans
 DC indicates behavior when an input voltage is held constant or changes slowly enough for the rest of the system to keep up. The term’s historical root comes from direct current, a method of transmitting power across a line with a constant voltage. In contrast, the transient response of a circuit is the behavior when an input voltage changes rapidly.
 
 
+An ideal [[inverter]]
 
 
+
+![[Pasted image 20240331193302.png]]
+a => ideal inverter
+b => more realistic inverter
+
+
+A reasonable place to choose the logic levels is where the slope of the transfer characteristic dV(Y) / dV(A) is −1. These two points are called the unity gain points. Choosing logic levels at the unity gain points usually maximizes the noise margins. If V IL were reduced, V OH would only increase by a small amount. But if V IL were increased, V OH would drop precipitously.
+
+
+### Static discipline
+To avoid inputs falling into the forbidden zone, digital logic gates are designed to conform to the static discipline. The static discipline requires that, given logically valid inputs, every circuit element will produce logically valid outputs.
+
+Four major logic families that predominated from the 1970’s through the 1990’s are Transistor-Transistor Logic (TTL), Complementary MetalOxide-Semiconductor Logic (CMOS, pronounced sea-moss), Low Voltage TTL Logic (LVTTL), and Low Voltage CMOS Logic (LVCMOS).
+
+
+
+![[Pasted image 20240331201852.png]]
+
+
+Robert Noyce, 1927–1990. Born in Burlington, Iowa. Received a B. A. in physics from Grinnell College and a Ph.D. in physics from MIT. Nicknamed “Mayor of Silicon Valley” for his profound influence on the industry.
+
+Cofounded Fairchild Semiconductor in 1957 and Intel in 1968. Coinvented the integrated circuit. Many engineers from his teams went on to found other seminal semiconductor companies
+
+### CMOS Transistors
+
+[[Transistors]]: electrically controlled switches that turn ON or OFF when a voltage or current is applied to a control terminal. 
+
+Two main types:
+1. bipolar junction transistors
+2. meta-oxide semiconductor field effect transistors (MOSFETs or MOS transistors)
+
+**Semiconductors**
+- Made from silicon  (group IV atom)
+	- by itself is a bad conduct
+	- When you add small amounts of impurities, *dopant* atoms it becomes a better conductor 
 
