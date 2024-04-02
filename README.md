@@ -15,7 +15,8 @@ A lot of my readings might be guided by my current day-to-day focus, so if it se
 	- [Torchserve](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/Large_Model_Systems/Torchserve.md)
 	- [1 bit LLMs]
 	- [Gemini]
-5. Electrical Systems [Ongoing]()
+6. Cryptography [Ongoing]
+7. Memory [Ongoing]
 
 # Icebox Topics
 

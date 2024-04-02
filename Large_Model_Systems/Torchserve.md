@@ -68,3 +68,20 @@ It partitions the layers of a model into stages that can be processed in paralle
 
 
 
+
+## Large scale training 
+resource: https://www.youtube.com/watch?v=QzcbnI42-VI 
+
+[[Data Parallel]]
+
+**Each worker:**
+- has a copy of the entire neural network model
+- responsible for compute of a portion of data (training minibatch)
+
+![[Pasted image 20240318095035.png]]
+
+
+### Communication
+- [[Allreduce]]
+	- 
+- any exposed co
