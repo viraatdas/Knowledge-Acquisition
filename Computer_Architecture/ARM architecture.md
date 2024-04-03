@@ -88,7 +88,7 @@ Robert Noyce, 1927–1990. Born in Burlington, Iowa. Received a B. A. in physics
 
 Cofounded Fairchild Semiconductor in 1957 and Intel in 1968. Coinvented the integrated circuit. Many engineers from his teams went on to found other seminal semiconductor companies
 
-### CMOS Transistors
+### [[CMOS]] Transistors
 
 [[Transistors]]: electrically controlled switches that turn ON or OFF when a voltage or current is applied to a control terminal. 
 
@@ -100,4 +100,5 @@ Two main types:
 - Made from silicon  (group IV atom)
 	- by itself is a bad conduct
 	- When you add small amounts of impurities, *dopant* atoms it becomes a better conductor 
+
 
