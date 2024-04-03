@@ -100,5 +100,46 @@ Two main types:
 - Made from silicon  (group IV atom)
 	- by itself is a bad conduct
 	- When you add small amounts of impurities, *dopant* atoms it becomes a better conductor 
+	  
+	![[Pasted image 20240402235714.png]]
+
+The hole is a lack of nega- tive charge, so it acts like a positively charged particle. Hence, we call boron a p-type dopant. Because the conductivity of silicon changes over many orders of magnitude depending on the concentration of dopants, sili- con is called a semiconductor.
+
+**Diodes**
+
+The junction between p-type and n-type silicon is called a diode. The p-type region is called the anode and the n-type region is called the cathode
+
+![[Pasted image 20240403002147.png]]
+
+
+### Power Consumption
+
+
+
+
+## Combinational Logic Design
+
+[[Bubble Pushing]]
+
+[[Karnaugh Maps]]
+
+
+
+### Combinational Building blocks
+
+[[Multiplexers]]
+
+[[Decoders]]
+
+### Timing
+
+[[Prpogation and Contamination Delay]]
+
+
+## Sequential Logic Design
+
+
+## Hardware Description Languages
+
 
 
