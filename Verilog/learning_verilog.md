@@ -15,16 +15,16 @@ Can be done in three different abstractions:
 ### Combinational Logic
 
 Output is a function of the input
-![alt text](image.png)
+![alt text](Verilog/image.png)
 **2 to 1 multiplexer**
 
 1. **Gate level**
    Describes the actual gate and how they are connected
-   ![alt text](image-1.png)
+   ![alt text](Verilog/image-1.png)
 
 2. **Dataflow level**
    Describes the flow of data in the circuit
-   ![alt text](image-2.png)
+   ![alt text](Verilog/image-2.png)
 
 3. **Behavioral level**
    describes the behavior, rather than what the circuit is

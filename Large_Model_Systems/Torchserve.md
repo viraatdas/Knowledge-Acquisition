@@ -17,13 +17,13 @@ You can use Pippy integration
 
 ### Pippy integration: Pipeline Parallelism for PyTorch
 
-![alt text](image.png)
+![alt text](Large_Model_Systems/image.png)
 
 https://www.deepspeed.ai/tutorials/pipeline/
 
 It partitions the layers of a model into stages that can be processed in parallel.
 
-![Pippy from Deep speed](image-1.png)
+![Pippy from Deep speed](Large_Model_Systems/image-1.png)
 
 #### How Pipeline Parallelism Works
 
