@@ -1,7 +1,3 @@
-[![Synced to https://viraat.lol](https://github.com/viraatdas/Knowledge-Acquisition/actions/workflows/sync-markdown-to-notion.yml/badge.svg)](https://github.com/viraatdas/Knowledge-Acquisition/actions/workflows/sync-markdown-to-notion.yml)
-
-A lot of my readings might be guided by my current day-to-day focus, so if it seems pretty honed on one topic that's why.
-
 # Completed/Ongoing Topics
 
 1. [CUDA](https://github.com/viraatdas/Knowledge-Acquisition/blob/main/CUDA/learning_cuda.md) [Ongoing]
