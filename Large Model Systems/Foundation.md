@@ -5,5 +5,5 @@ List of following systems in the notes:
 - [[LLaVA]]
 - [[1 bit LLMs]]
 - [[Gemini]]
-- 
+
 
