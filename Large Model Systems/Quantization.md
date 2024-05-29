@@ -3,4 +3,11 @@ Converting a model from using FP (like 32-bit floats) to using lower-precision f
 ## How does quantization work?
 1. [[Post-Training Static quantization]]: Entire model including weights and activations are converted to lower precision. Model is calibrated using a small calibration dataset to minimize the impact on accuracy. May not always have best accuracy. 
 2. [[Dynamic Quantization]]: Weights quantized statically, but activations are quantized dynamocally at runtime. Method is often used for models wehre activation ranges can vary significantly depending on the input data. 
-3. Quantization-Aware Training (QAT):
+3. Quantization-Aware Training (QAT)
+
+
+source: https://www.youtube.com/watch?v=0VdNflU08yA 
+
+## Problem 
+- Smallest Llama 2 has 7 billion parameters. If every parameter is 32 bit, then we need $\frac{7*10^9*32}{8*10^9} = 28 GB$ just to store parameters on disk
+- For inference, we need to load all its parameters in memory
