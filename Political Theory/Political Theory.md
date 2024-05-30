@@ -11,6 +11,3 @@ Source: George H. Sabine - A History of Political Theory
 - Greeks did not have a huge leisure class
 - Most Athenian citizens must have been tradesman or artistans or farmers
 - Aristotle wanted all the manual work to be done by slaves in order that citizens might have leisure to devote themselves to politics
-
-
-[[Computer Architecture]]
