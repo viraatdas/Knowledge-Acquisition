@@ -1,3 +1,0 @@
----
-title: Nuclear Power Plants
----
