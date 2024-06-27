@@ -41,3 +41,12 @@ Python can represent arbitraty big numbers by using so [[BigNum arithmetic]]: ea
 ![[Pasted image 20240529181742.png]]
 
 
+[[Multiply-Accumulate (MAC)]]
+
+## How to choose range
+Min-max:
+- $\alpha = max(V)$
+- $\beta = max(V)$
+- Sensitive to outliers
+
+Percentile

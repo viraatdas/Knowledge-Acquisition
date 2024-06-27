@@ -68,3 +68,11 @@ In the Transformer, this attention mechanism is used in three different ways:
 
 
 ## [[How a Transformer works at inference vs training time]]
+
+
+
+
+----
+source: https://www.youtube.com/watch?v=ISNdQcPhsts
+
+- [ ] Inouts -> Input Embeddings yo

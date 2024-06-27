@@ -14,6 +14,8 @@ Deeply examining how large models (GPT-4, Llama-2, etc) are trained and deployed
 **List of topics:** 
 1. [[Transformers]]
 2. [[Quantization]]
+3. [[MatMul-Free Language Modeling]]
+4. [[LlaMa from scratch]]
 
 
 
